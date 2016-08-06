@@ -1,0 +1,170 @@
+<h2>
+    &nbsp;</h2>
+<p align="center" style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;"><font color="#FF0000" style="margin: 0px; padding: 0px;">Catching Exceptions</font></b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    An exception is a point in the code where something out of the ordinary has happened and the regular flow of the program needs to be interrupted; an exception is not necessarily an error. A method which has run into such a case will throw an exception using the throw(ExceptionClass) method. When an exception is thrown it must be caught by a catch statement that should sit right after a try statement.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;"><font face="Verdana" style="margin: 0px; padding: 0px;">// This is the Hello program in Java<br style="margin: 0px; padding: 0px;" />
+        class Hello {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; public static void main (String args[]) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* Now let&#39;s say hello */<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(&quot;Hello &quot;);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(args[0]);<br style="margin: 0px; padding: 0px;" />
+        &nbsp; }<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        }</font></code></p>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">If you run the program without giving it any command line arguments, then the&nbsp; runtime system generates an exception something like,</span></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <tt style="margin: 0px; padding: 0px;">Exception in thread &quot;main&quot; java.lang.ArrayIndexOutOfBoundsException at Hello.main(C:\javahtml\Hello.java:7)</tt></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Since we didn&#39;t give Hello any command line arguments there wasn&#39;t anything in&nbsp;<code style="margin: 0px; padding: 0px;">args[0]</code>. Therefore Java kicked back this not too friendly error message about an &quot;ArrayIndexOutOfBoundsException.&quot;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    we can fix this problem by testing the length of the array before we try to access its first element (using array.length). This works well in this simple case, but this is far from the only such potential problem.&nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">What is an Exception ?</b><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    Let us see what happens when an exception occurs and is not handled properly<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    When you compile and run the following program<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    public class Test{&nbsp;<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp; public static void main(String str[]){<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp; int y = 0;<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp; int x = 1;<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp; // a division by 0 occurs here.<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp; int z = x/y;<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp; System.out.println(&quot;after didvision&quot;);<br style="margin: 0px; padding: 0px;" />
+    &nbsp; }<br style="margin: 0px; padding: 0px;" />
+    }<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    The execution of the Test stops and this is caused by the&nbsp;<u style="margin: 0px; padding: 0px;">division by zero</u>&nbsp;at - x/y - an exception has been thrown but has not been handled properly.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <b style="margin: 0px; padding: 0px;">How to handle an Exception ?</b><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    To handle an Exception, enclose the code that is likely to throw an exception in a&nbsp;<u style="margin: 0px; padding: 0px;">try block&nbsp;</u>and follow it immediately by a catch clause as follows<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    public class Test{&nbsp;<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp; public static void main(String str[]){<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int y = 0;<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int x = 1;<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // try block to &quot;SEE&quot; if an exception occurs<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try{<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int z = x/y;<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;after didvision&quot;);<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // catch clause below handles the&nbsp;<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ArithmeticException generated by&nbsp;<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // the division by zero.<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } catch (ArithmeticException ae)&nbsp;<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {System.out.println(&quot; attempt to divide by 0&quot;);}<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot; after catch &quot;);<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp; }&nbsp;<br style="margin: 0px; padding: 0px;" />
+    }<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    The output of the above program is as follows<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    attempt to divide by 0&nbsp;<br style="margin: 0px; padding: 0px;" />
+    after catch<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    the statement - System.out.println(&quot;after didvision&quot;) - is NOT executed, once an exception is thrown, the program control moves out of the try block into the catch block.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    The goal of exception handling is to be able to define the regular flow of the program in part of the code without worrying about all the special cases. Then, in a separate block of code, you cover the exceptional cases. This produces more legible code since you don&#39;t need to interrupt the flow of the algorithm to check and respond to every possible strange condition. The runtime environment is responsible for moving from the regular program flow to the exception handlers when an exceptional condition arises.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    In practice what you do is write blocks of code that may generate exceptions inside try-catch blocks. You try the statements that generate the exceptions. Within your try block you are free to act as if nothing has or can go wrong. Then, within one or more catch blocks, you write the program logic that deals with all the special cases.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    To start a section of code which might fail or not follow through you start a try clause:</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <small style="margin: 0px; padding: 0px; font-size: 11px;">try<br style="margin: 0px; padding: 0px;" />
+        {<br style="margin: 0px; padding: 0px;" />
+        &nbsp; // Section of code which might fail<br style="margin: 0px; padding: 0px;" />
+        }</small></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    The try statement is needed in case of an exception. If the read fails in some way it will throw an exception of type java.io.IOException. That exception must be caught in this method, or the method can declare that it will continue throwing that message. Exception handling is a very powerful tool, you can use it to catch and throw exceptions and thus group all your error handling code very well and make it much more readable in larger more complex applications. After the try section there must exist one or more catch statements to catch some or all of the exceptions that can happen within the try block. Exceptions that are not caught will be passed up to the next level, such as the function that called the one which threw the exception, and so on. .</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <small style="margin: 0px; padding: 0px; font-size: 11px;">try<br style="margin: 0px; padding: 0px;" />
+        {<br style="margin: 0px; padding: 0px;" />
+        &nbsp; // Section of code which might fail<br style="margin: 0px; padding: 0px;" />
+        }<br style="margin: 0px; padding: 0px;" />
+        catch (Exception1ThatCanHappen E)<br style="margin: 0px; padding: 0px;" />
+        {<br style="margin: 0px; padding: 0px;" />
+        &nbsp; // things to do if this exception was thrown..<br style="margin: 0px; padding: 0px;" />
+        }<br style="margin: 0px; padding: 0px;" />
+        catch (Exception2ThatCanHappen E)<br style="margin: 0px; padding: 0px;" />
+        {<br style="margin: 0px; padding: 0px;" />
+        &nbsp; // things to do if this exception was thrown..<br style="margin: 0px; padding: 0px;" />
+        }</small></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Here&#39;s an example of exception handling in Java using the Hello World program above:</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;"><font color="#000000" style="margin: 0px; padding: 0px;">Source Code</font></u></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;"><font face="Verdana" style="margin: 0px; padding: 0px;">// This is the Hello program in Java<br style="margin: 0px; padding: 0px;" />
+        class ExceptionalHello {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; public static void main (String args[]) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* Now let&#39;s say hello */<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Hello &quot; + args[0]);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; catch (Exception e) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Hello whoever you are&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp; }<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        }</font></code></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    You may or may not print an error message. If you write an exception handler and you don&#39;t expect it to be called, then by all means put a</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;">System.out.println(&quot;Error: &quot; + e);</code></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    This has the folowing advantages over handling your errors internally:</p>
+<ul style="margin: 0.3em 0px 1.5em; padding-right: 0px; padding-left: 0px; list-style-type: none; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <li style="margin: 0px; padding: 0px 0px 0px 25px; line-height: 1.4em; background: url(&quot;images/sprites.gif&quot;) 0px 0px no-repeat transparent;">
+        You can react to an error in custom defined way. A read error does not mean that the program should crash.</li>
+    <li style="margin: 0px; padding: 0px 0px 0px 25px; line-height: 1.4em; background: url(&quot;images/sprites.gif&quot;) 0px 0px no-repeat transparent;">
+        You can write code with no worry about failure which will be handled by the users of your class.</li>
+    <li style="margin: 0px; padding: 0px 0px 0px 25px; line-height: 1.4em; background: url(&quot;images/sprites.gif&quot;) 0px 0px no-repeat transparent;">
+        You can group your error handling code much better.</li>
+    <li style="margin: 0px; padding: 0px 0px 0px 25px; line-height: 1.4em; background: url(&quot;images/sprites.gif&quot;) 0px 0px no-repeat transparent;">
+        You can make your application more transactional focused with nested try catch blocks:</li>
+</ul>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;">A simple Java code which demonstrates the exception handling in Java</u></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <i style="margin: 0px; padding: 0px;">Refer to the java API document to see all exception types that can be handled in Java.</i></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;">Source Code</u></p>
+<pre style="margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(51, 51, 51);">
+public class excep2
+{
+	public static void main(String args[])
+	{
+		int i =0 ;
+		//Declare an array of strings
+		String Box [] = {&quot;Book&quot;, &quot;Pen&quot;, &quot;Pencil&quot;};
+		while(i&lt;4)
+		{
+			try
+			{
+				System.out.println(Box[i]);
+
+			}
+			catch(ArrayIndexOutOfBoundsException e)
+			{
+				System.out.println(&quot;Subscript Problem &quot; + e);
+			i++;
+			}
+			finally
+			{
+				System.out.println(&quot;This is always printed.&quot;);
+			}
+			i++;
+		}
+	}
+}</pre>

@@ -1,0 +1,38 @@
+<h2>
+    &nbsp;</h2>
+<p align="center" style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;"><font color="#FF0000" style="margin: 0px; padding: 0px;"><u style="margin: 0px; padding: 0px;">Java Command Line Arguments</u></font></b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    This class demonstrates how command line arguments are passed in Java. Arguments are passed as a String array to the main method of a class. The first element (element 0) is the first argument passed not the name of the class.<br style="margin: 0px; padding: 0px;" />
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;">Source Code</u></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    An example that prints in the command line arguments passed into the class when executed.&nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <font face="Verdana" style="margin: 0px; padding: 0px;">public class ReadArgs<br style="margin: 0px; padding: 0px;" />
+        {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public static final void main(String args[])<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (int i=0;i&lt;args.length;++i)<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println( args[i] );<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        }&nbsp;</font></p>
+<p align="left" style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <br style="margin: 0px; padding: 0px;" />
+    <u style="margin: 0px; padding: 0px;"><font color="#000000" style="margin: 0px; padding: 0px;">Sample Run</font></u></p>
+<p align="left" style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    With the following command line, the output shown is produced.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    java ReadArgs zero one two three<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <i style="margin: 0px; padding: 0px;">Output:</i><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    The following command line arguments were passed:<br style="margin: 0px; padding: 0px;" />
+    arg[0]: zero<br style="margin: 0px; padding: 0px;" />
+    arg[1]: one<br style="margin: 0px; padding: 0px;" />
+    arg[2]: two<br style="margin: 0px; padding: 0px;" />
+    arg[3]: three</p>

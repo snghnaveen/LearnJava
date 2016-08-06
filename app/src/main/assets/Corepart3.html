@@ -1,0 +1,329 @@
+<h2 style="margin: 1.2em 0px 0.3em; padding: 0px 0px 0.1em; font-family: arial; color: rgb(0, 0, 0); font-size: 18.0608px;">
+    <b style="margin: 0px; padding: 0px;"><u style="margin: 0px; padding: 0px;"><font size="2" style="margin: 0px; padding: 0px;">Core Java Programs [PAGE 3]</font></u></b></h2>
+<h2>
+    &nbsp;</h2>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <font size="2" style="margin: 0px; padding: 0px;">Some Java programs which help lot of java beginners to understand the basic fundamentals in Java programming. Most of these programs take input from the command line.&nbsp;<i style="margin: 0px; padding: 0px;">Ex - int num = Integer.parseInt(args[0]);</i></font></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">Program 20</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">/* switch case demo</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp;Example :</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Input - 124</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output - One Two Four */</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    class SwitchCaseDemo{</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String args[]){</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try{</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int num = Integer.parseInt(args[0]);</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int n = num; //used at last time check</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int reverse=0,remainder;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(num &gt; 0){</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remainder = num % 10;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reverse = reverse * 10 + remainder;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num = num / 10;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String result=&quot;&quot;; //contains the actual output</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(reverse &gt; 0){</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remainder = reverse % 10;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reverse = reverse / 10;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switch(remainder){</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case 0 :</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result = result + &quot;Zero &quot;;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case 1 :</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result = result + &quot;One &quot;;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case 2 :</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result = result + &quot;Two &quot;;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case 3 :</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result = result + &quot;Three &quot;;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case 4 :</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result = result + &quot;Four &quot;;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case 5 :</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result = result + &quot;Five &quot;;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case 6 :</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result = result + &quot;Six &quot;;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case 7 :</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result = result + &quot;Seven &quot;;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case 8 :</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result = result + &quot;Eight &quot;;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case 9 :</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result = result + &quot;Nine &quot;;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; default:</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result=&quot;&quot;;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(result);</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}catch(Exception e){</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(&quot;Invalid Number Format&quot;);</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    }</p>
+<hr align="left" style="margin: 0px; padding: 0px; height: 1px; color: rgb(242, 242, 242); border: none; clear: both; font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px; background: rgb(242, 242, 242);" width="100%" />
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">Program 21</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">/* Write a program to generate Harmonic Series.</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp;Example :</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Input - 5</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output - 1 + 1/2 + 1/3 + 1/4 + 1/5 = 2.28 (Approximately) */</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    class HarmonicSeries{</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String args[]){</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int num = Integer.parseInt(args[0]);</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double result = 0.0;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(num &gt; 0){</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = result + (double) 1 / num;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num--;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(&quot;Output of Harmonic Series is &quot;+result);</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;}</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    }</p>
+<hr align="left" style="margin: 0px; padding: 0px; height: 1px; color: rgb(242, 242, 242); border: none; clear: both; font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px; background: rgb(242, 242, 242);" width="100%" />
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">Program 22</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">/*Write a program to find average of consecutive N Odd no. and Even no. */</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    class EvenOdd_Avg{</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String args[]){</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int n = Integer.parseInt(args[0]);</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int cntEven=0,cntOdd=0,sumEven=0,sumOdd=0;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(n &gt; 0){</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(n%2==0){</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cntEven++;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sumEven = sumEven + n;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else{</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cntOdd++;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sumOdd = sumOdd + n;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n--;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int evenAvg,oddAvg;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;evenAvg = sumEven/cntEven;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oddAvg = sumOdd/cntOdd;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(&quot;Average of first N Even no is &quot;+evenAvg);</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(&quot;Average of first N Odd no is &quot;+oddAvg);</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;}</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    }</p>
+<hr align="left" style="margin: 0px; padding: 0px; height: 1px; color: rgb(242, 242, 242); border: none; clear: both; font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px; background: rgb(242, 242, 242);" width="100%" />
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">Program 23</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">/* Display Triangle as follow : BREAK DEMO.</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;1</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;2 3</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;4 5 6</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;7 8 9 10 ... N */</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    class Output1{</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String args[]){</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int c=0;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int n = Integer.parseInt(args[0]);</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loop1: for(int i=1;i&lt;=n;i++){</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loop2: for(int j=1;j&lt;=i;j++){</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(c!=n){</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c++;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(c+&quot; &quot;);</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break loop1;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(&quot;\n&quot;);</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    }</p>
+<hr align="left" style="margin: 0px; padding: 0px; height: 1px; color: rgb(242, 242, 242); border: none; clear: both; font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px; background: rgb(242, 242, 242);" width="100%" />
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">Program 24</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">/* Display Triangle as follow</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;0</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;1 0</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;1 0 1</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;0 1 0 1 */</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    class Output2{</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String args[]){</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int i=1;i&lt;=4;i++){</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int j=1;j&lt;=i;j++){</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(((i+j)%2)+&quot; &quot;);</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(&quot;\n&quot;);</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    }<b style="margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></p>
+<hr align="left" style="margin: 0px; padding: 0px; height: 1px; color: rgb(242, 242, 242); border: none; clear: both; font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px; background: rgb(242, 242, 242);" width="100%" />
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">Program 25</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">/* Display Triangle as follow</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;1</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;2 4</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;3 6 9</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;4 8 12 16 ... N (indicates no. of Rows) */</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    class Output3{</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String args[]){</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int n = Integer.parseInt(args[0]);</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for(int i=1;i&lt;=n;i++){</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for(int j=1;j&lt;=i;j++){</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print((i*j)+&quot; &quot;);</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(&quot;\n&quot;);</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    }</p>

@@ -1,0 +1,70 @@
+<h2>
+    &nbsp;</h2>
+<p align="center" style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;"><u style="margin: 0px; padding: 0px;"><font color="#FF0000" style="margin: 0px; padding: 0px;">Java Increment and Decrement Operators</font></u></b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    There are 2 Increment or decrement operators -&gt;&nbsp; ++ and --. These two operators are unique in that they can be written both before the operand they are applied to, called prefix increment/decrement, or after, called postfix increment/decrement.&nbsp; The meaning is different in each case.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <i style="margin: 0px; padding: 0px;">Example</i></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    x = 1;<br style="margin: 0px; padding: 0px;" />
+    y = ++x;<br style="margin: 0px; padding: 0px;" />
+    System.out.println(y);<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    prints 2, but<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    x = 1;<br style="margin: 0px; padding: 0px;" />
+    y = x++;<br style="margin: 0px; padding: 0px;" />
+    System.out.println(y);<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    prints 1</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;">Source Code</u></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;"><font face="Verdana" style="margin: 0px; padding: 0px;">//Count to ten<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        class UptoTen&nbsp; {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp; public static void main (String args[]) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; int i;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; for (i=1; i &lt;=10; i++) {&nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(i);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; }&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        }</font></code></p>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">When we write i++ we&#39;re using shorthand for i = i + 1. When we say i-- we&#39;re using shorthand for i = i - 1. Adding and subtracting one from a number are such common operations that these special increment and decrement operators have been added to the language. T</span></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    There&#39;s another short hand for the general add and assign operation,&nbsp;<code style="margin: 0px; padding: 0px;">+=</code>. We would normally write this as&nbsp;<code style="margin: 0px; padding: 0px;">i += 15</code>. Thus if we wanted to count from 0 to 20 by two&#39;s we&#39;d write:</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;">Source Code</u></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;"><font face="Verdana" style="margin: 0px; padding: 0px;">class CountToTwenty&nbsp; {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp; public static void main (String args[]) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; int i;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; for (i=0; i &lt;=20; i += 2) {&nbsp; //Note Increment Operator by 2<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(i);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; }&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;} //main ends here<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        }</font></code></p>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">As you might guess there is a corresponding -= operator. If we wanted to count down from twenty to zero by twos we could write:&nbsp;</span><code style="margin: 0px; padding: 0px; color: rgb(51, 51, 51);">-=</code></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;"><font face="Verdana" style="margin: 0px; padding: 0px;">class CountToZero&nbsp; {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp; public static void main (String args[]) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; int i;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; for (i=20; i &gt;= 0; i -= 2) {&nbsp; //Note Decrement Operator by 2<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(i);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; }&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        }</font></code></p>

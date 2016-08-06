@@ -1,0 +1,45 @@
+<p align="center" style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;"><u style="margin: 0px; padding: 0px;"><font color="#FF0000" style="margin: 0px; padding: 0px;">Java Comments</font></u></b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    The Java programming language supports three kinds of comments:<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    /* text */<br style="margin: 0px; padding: 0px;" />
+    The compiler ignores everything from /* to */.&nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    /** documentation */<br style="margin: 0px; padding: 0px;" />
+    This indicates a documentation comment (doc comment, for short). The compiler ignores this kind of comment, just like it ignores comments that use /* and */. The JDK javadoc tool uses doc comments when preparing automatically generated documentation.&nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    // text<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    The compiler ignores everything from // to the end of the line.&nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;">Example</u></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;">Java denotes comments in three ways:</u><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    1. Double slashes in front of a single line comment:<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    int i=5; // Set the integer to 5<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    2. Matching slash-asterisk (/*) and asterisk-slash (*/) to bracket multi-line comments:<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    /*<br style="margin: 0px; padding: 0px;" />
+    Set the integer to 5<br style="margin: 0px; padding: 0px;" />
+    */<br style="margin: 0px; padding: 0px;" />
+    int i=5;<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    3. Matching slash-double asterisk (/**) &amp; asterisk-slash(*/) for Javadoc automatic hypertext documentation, as in<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    /**<br style="margin: 0px; padding: 0px;" />
+    This applet tests graphics.<br style="margin: 0px; padding: 0px;" />
+    */<br style="margin: 0px; padding: 0px;" />
+    public class testApplet extends applet{...<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    or<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    /**<br style="margin: 0px; padding: 0px;" />
+    * Asterisks inside the comment are ignored by javadoc so they<br style="margin: 0px; padding: 0px;" />
+    * can be used to make nice line markers.<br style="margin: 0px; padding: 0px;" />
+    **/<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    The SDK tool javadoc uses the latter /** ..*/ comment style when it produces hypertext pages to describe a class.</p>

@@ -1,0 +1,70 @@
+<h2>
+    &nbsp;</h2>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">Java Swing</b>&nbsp;is a GUI toolkit for Java. Swing is one part of the Java Foundation Classes (JFC). Swing includes graphical user interface (GUI) widgets such as text boxes, buttons, split-panes, and tables.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Swing widgets provide more sophisticated GUI components than the earlier Abstract Window Toolkit. Since they are written in pure Java, they run the same on all platforms, unlike the AWT which is tied to the underlying platform&#39;s windowing system. Swing supports pluggable look and feel &ndash; not by using the native platform&#39;s facilities, but by roughly emulating them. This means you can get any supported look and feel on any platform. The disadvantage of lightweight components is possibly slower execution. The advantage is uniform behavior on all platforms.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">History</b><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    The Internet Foundation Classes (IFC) were a graphics library for Java originally developed by Netscape Communications Corporation and first released on Dec 16, 1996.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    On April 2, 1996, Sun Microsystems and Netscape Communications Corporation announced their intention to combine IFC with other technologies to form the Java Foundation Classes. In addition to the components originally provided by IFC, Swing introduced a mechanism that allowed the look and feel of every component in an application to be altered without making substantial changes to the application code. The introduction of support for a pluggable look and feel allowed Swing components to emulate the appearance of native components while still retaining the benefits of platform independence. This feature also makes it easy to have an individual application&#39;s appearance look very different from other native programs.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Originally distributed as a separately downloadable library, Swing has been included as part of the Java Standard Edition since release 1.2. The Swing classes are contained in the javax.swing package hierarchy.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;">Architecture</b><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    The Swing library makes heavy use of the Model/View/Controller software design pattern, which attempts to separate the data being viewed from the method by which it is viewed. Because of this, most Swing components have associated models (typically as interfaces), and the programmer can use various default implementations or provide their own. For example, the JTable has a model called TableModel that describes an interface for how a table would access tabular data. A default implementation of this operates on a two-dimensional array.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    Swing favors relative layouts (which specify the positional relationships between components), as opposed to absolute layouts (which specify the exact location and size of components). The motivation for this is to allow Swing applications to work and appear visually correct regardless of the underlying systems colors, fonts, language, sizes or I/O devices. This can make screen design somewhat difficult and numerous tools have been developed to allow visual designing of screens.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    Swing also uses a publish subscribe event model (as does AWT), where listeners subscribe to events that are fired by the application (such as pressing a button, entering text or clicking a checkbox). The model classes typically include, as part of their interface, methods for attaching listeners (this is the publish aspect of the event model).<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    The frequent use of loose coupling within the framework makes Swing programming somewhat different from higher-level GUI design languages and 4GLs. This is a contributing factor to Swing having such a steep learning curve.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <b style="margin: 0px; padding: 0px;">Look and feel</b><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    Swing allows one to specialize the look and feel of widgets, by modifying the default (via runtime parameters), deriving from an existing one, by creating one from scratch, or, beginning with J2SE 5.0, by using the skinnable Synth Look and Feel, which is configured with an XML property file. The look and feel can be changed at runtime, and early demonstrations of Swing would frequently provide a way to do this.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <b style="margin: 0px; padding: 0px;">Relationship to AWT</b><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    Since early versions of Java, a portion of the Abstract Windowing Toolkit (AWT) has provided platform independent APIs for user interface components. In AWT, each component is rendered and controlled by a native peer component specific to the underlying windowing system.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    By contrast, Swing components are often described as lightweight because they do not require allocation of native resources in the operating system&#39;s windowing toolkit. The AWT components are referred to as heavyweight components.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    Much of the Swing API is generally a complementary extension of the AWT rather than a direct replacement. In fact, every Swing lightweight interface ultimately exists within an AWT heavyweight component because all of the top-level components in Swing (JApplet, JDialog, JFrame, and JWindow) extend an AWT top-level container. The core rendering functionality used by Swing to draw its lightweight components is provided by Java2D, another part of JFC. However, the use of both lightweight and heavyweight components within the same window is generally discouraged due to Z-order incompatibilities.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <b style="margin: 0px; padding: 0px;">Relationship to SWT</b><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    The Standard Widget Toolkit (SWT) is a competing toolkit originally developed by IBM and now maintained by the Eclipse Foundation. SWT&#39;s implementation has more in common with the heavyweight components of AWT. This confers benefits such as more accurate fidelity with the underlying native windowing toolkit, at the cost of an increased exposure to the native resources in the programming model.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    The advent of SWT has given rise to a great deal of division among Java desktop developers with many strongly favouring either SWT or Swing. A renewed focus on Swing look and feel fidelity with the native windowing toolkit in the approaching Java SE 6 release (as of February 2006) is probably a direct result of this.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <b style="margin: 0px; padding: 0px;">Example</b><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    The following is a Hello World program using Swing.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    import javax.swing.JFrame;<br style="margin: 0px; padding: 0px;" />
+    import javax.swing.JLabel;<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    public final class HelloWorld extends JFrame {<br style="margin: 0px; padding: 0px;" />
+    private HelloWorld() {<br style="margin: 0px; padding: 0px;" />
+    setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);<br style="margin: 0px; padding: 0px;" />
+    getContentPane().add(new JLabel(&quot;Hello, World!&quot;));<br style="margin: 0px; padding: 0px;" />
+    pack();<br style="margin: 0px; padding: 0px;" />
+    setLocationRelativeTo(null);<br style="margin: 0px; padding: 0px;" />
+    }<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    public static void main(String[] args) {<br style="margin: 0px; padding: 0px;" />
+    new HelloWorld().setVisible(true);<br style="margin: 0px; padding: 0px;" />
+    }<br style="margin: 0px; padding: 0px;" />
+    }</p>

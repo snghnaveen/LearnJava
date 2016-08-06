@@ -1,0 +1,126 @@
+<h2>
+    &nbsp;</h2>
+<p align="center" style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <font color="#FF0000" style="margin: 0px; padding: 0px;"><b style="margin: 0px; padding: 0px;"><u style="margin: 0px; padding: 0px;">Java Variables and Arithmetic Expressions</u></b></font></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Java&nbsp;<b style="margin: 0px; padding: 0px;">Variables&nbsp;</b>are used to store data. Variables have type, name, and value. Variable names begin with a character, such as x, D, Y, z. Other examples are xy1, abc2, Count, N, sum, Sum, product etc. These are all variable names.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    Different variable types are int, char, double. A variable type tells you what kind of data can be stored in that variable.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    The&nbsp;<b style="margin: 0px; padding: 0px;">syntax</b>&nbsp;of assignment statements is easy. Assignment statements look like this:<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    variableName = expression ;<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <i style="margin: 0px; padding: 0px;">For example:</i><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    int x; // This means variable x can store numbers such as 2, 10, -5.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    char y; // This means variable y can store single characters &#39;a&#39;, &#39;A&#39;.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    double z; // This means variable z can store real numbers such as<br style="margin: 0px; padding: 0px;" />
+    10.45, 3.13411.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    The above are declarations for variables x, y and z.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;">Important points:</u><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    1. Note that a variable has to be declared before being used.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    2. The values assigned to a variable correspond to its type. Statements below represent assignment of values to a variable.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    x = 100; // x is an integer variable.<br style="margin: 0px; padding: 0px;" />
+    y = &#39;A&#39;; // y is a character variable.<br style="margin: 0px; padding: 0px;" />
+    abc = 10.45; // abc is of type double (real numbers).<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    3. Both variable declaration and assignment of values can be done in same statement. For example,<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    int x;<br style="margin: 0px; padding: 0px;" />
+    x = 100; is same as int x = 100;<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    4. A variable is declared only once.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    int x; // Declaration for x.<br style="margin: 0px; padding: 0px;" />
+    x = 100; // Initialization.<br style="margin: 0px; padding: 0px;" />
+    x = x + 12; // Using x in an assignment statement.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Often in a program you want to give a variable, a constant value. This can be done:<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    class ConstDemo<br style="margin: 0px; padding: 0px;" />
+    {<br style="margin: 0px; padding: 0px;" />
+    public static void main ( String[] arg )<br style="margin: 0px; padding: 0px;" />
+    {<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; final double PI = 3.14;<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; final double CONSTANT2 = 100;<br style="margin: 0px; padding: 0px;" />
+    . . . . . .<br style="margin: 0px; padding: 0px;" />
+    }<br style="margin: 0px; padding: 0px;" />
+    }</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    The reserved word final tells the compiler that the value will not change. The names of constants follow the same rules as the names for variables. (Programmers sometimes use all capital letters for constants; but that is a matter of personal style, not part of the language.)</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    2. Arithmetic Expressions<br style="margin: 0px; padding: 0px;" />
+    --------------------------<br style="margin: 0px; padding: 0px;" />
+    An assignment statement or expression changes the value that is held in a variable. Here is a program that uses an assignment statement:<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <font face="Verdana" style="margin: 0px; padding: 0px;">class example<br style="margin: 0px; padding: 0px;" />
+        {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public static void main ( String[] args )<br style="margin: 0px; padding: 0px;" />
+        {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; long x ; //a declaration without an initial value<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x = 123; //<font color="#FF0000" style="margin: 0px; padding: 0px;">an assignment statement</font><br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;The variable x contains: &quot; + x );<br style="margin: 0px; padding: 0px;" />
+        }<br style="margin: 0px; padding: 0px;" />
+        }</font><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    Java&nbsp;<b style="margin: 0px; padding: 0px;">Arithmetic expressions</b>&nbsp;use arithmetic operators such as +, -, /, *, and %. The % operator is the remainder or modulo operator. Arithmetic expressions are used to assign arithmetic values to variables. An expression is a combination of literals, operators, variables, and parentheses used to calculate a value.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    The following code describes the use of different arithmetic expressions.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    int x, y, z; // Three integer variables declared at the same time.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    x = 10;<br style="margin: 0px; padding: 0px;" />
+    y = 12;<br style="margin: 0px; padding: 0px;" />
+    z = y / x; // z is assigned the value of y divided by x.<br style="margin: 0px; padding: 0px;" />
+    // Here z will have value 1.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    z = x + y; // z is assigned the value of x+y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Here z will have value 22.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    z = y % x // z is assigned the value of remainder when y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // is divided by x. Here z will have value 2.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    Java&nbsp;<b style="margin: 0px; padding: 0px;">Boolean expressions</b>&nbsp;are expressions which are either true or false. The different boolean operators are &lt; (less than), &gt; (greater than),<br style="margin: 0px; padding: 0px;" />
+    == (equal to), &gt;= (greater or equal to), &lt;= (less or equal), != (not equal to).<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    Example:<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    int x = 10;<br style="margin: 0px; padding: 0px;" />
+    int y = 4;<br style="margin: 0px; padding: 0px;" />
+    int z = 5;<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    (x &lt; 10) // This expression checks if x is less than 10.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    (y &gt; 1) // This expression checks if y is greater than 1.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    ((x - y) == (z + 1)); // This expression checks<br style="margin: 0px; padding: 0px;" />
+    // if (x - y) equals (z + 1).<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    A boolean expression can also be a combination of other boolean expressions. Two or more boolean expressions can be connected using &amp;&amp;<br style="margin: 0px; padding: 0px;" />
+    (logical AND) and || (logical OR) operators.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    The &amp;&amp; operator represents logical AND. The expression is true only if both boolean expressions are true. The || operator represents logical<br style="margin: 0px; padding: 0px;" />
+    OR. This expression would be true if any one of the associated expressions is true.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <i style="margin: 0px; padding: 0px;">Example:</i><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    int x = 10; int y = 4; int z = 5;<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    (x &lt;= 10) &amp;&amp; (y &gt; 1) // This expression checks if x is less<br style="margin: 0px; padding: 0px;" />
+    // than 10 AND y is greater than 1.<br style="margin: 0px; padding: 0px;" />
+    // This expression is TRUE.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    (x*y == 41) || (z == 5) // This expression checks if x*y is equal<br style="margin: 0px; padding: 0px;" />
+    // to 40 OR if z is equal to 5.<br style="margin: 0px; padding: 0px;" />
+    // This expression is FALSE</p>

@@ -1,0 +1,31 @@
+<h2>
+    &nbsp;</h2>
+<p align="center" style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;"><font color="#FF0000" style="margin: 0px; padding: 0px;">Java Conditional Operators</font></b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Java has the conditional operator. It&#39;s a ternary operator -- that is, it has three operands -- and it comes in two pieces, ? and :, that have to be used together. It takes the form<br style="margin: 0px; padding: 0px;" />
+    &nbsp;</p>
+<p align="center" style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <font color="#FF0000" style="margin: 0px; padding: 0px;"><b style="margin: 0px; padding: 0px;">Boolean-expression</b>&nbsp;?&nbsp;<b style="margin: 0px; padding: 0px;">expression-1</b>&nbsp;:&nbsp;<b style="margin: 0px; padding: 0px;">expression-2<br style="margin: 0px; padding: 0px;" />
+        &nbsp;</b></font></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    The JVM tests the value of&nbsp;<b style="margin: 0px; padding: 0px;"><font color="#FF0000" style="margin: 0px; padding: 0px;">Boolean-expression</font></b>. If the value is&nbsp;<tt style="margin: 0px; padding: 0px;">true</tt>,&nbsp;<font color="#000080" style="margin: 0px; padding: 0px;">it evaluates&nbsp;<b style="margin: 0px; padding: 0px;">expression-1</b>; otherwise, it evaluates&nbsp;<b style="margin: 0px; padding: 0px;">expression-2</b>. For<br style="margin: 0px; padding: 0px;" />
+    &nbsp;</font></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <font color="#000000" style="margin: 0px; padding: 0px;"><u style="margin: 0px; padding: 0px;">Example</u></font></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    if (a &gt; b) {<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp; max = a;<br style="margin: 0px; padding: 0px;" />
+    }<br style="margin: 0px; padding: 0px;" />
+    else {<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp; max = b;<br style="margin: 0px; padding: 0px;" />
+    }<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    Setting a single variable to one of two states based on a single condition is such a common use of if-else that a shortcut has been devised for it, the conditional operator, ?:. Using the conditional operator you can rewrite the above example in a single line like this:<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    max = (a &gt; b) ? a : b;</p>

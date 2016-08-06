@@ -1,0 +1,70 @@
+<h2>
+    &nbsp;</h2>
+<p align="center" style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <font color="#FF0000" style="margin: 0px; padding: 0px;"><b style="margin: 0px; padding: 0px;"><u style="margin: 0px; padding: 0px;">Methods (Includes Recursive Methods)</u></b></font></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    A method is a group of instructions that is given a name and can be called up at any point in a program simply by quoting that name. Each&nbsp;<dfn style="margin: 0px; padding: 0px;">calculation part</dfn>&nbsp;of a program is called a method. Methods are logically the same as C&#39;s functions, Pascal&#39;s procedures and functions, and Fortran&#39;s functions and subroutines.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    When I wrote&nbsp;<code style="margin: 0px; padding: 0px;">System.out.println(&quot;Hello World!&quot;);</code>&nbsp;in the first program we were using the&nbsp;<code style="margin: 0px; padding: 0px;">System.out.println()</code>&nbsp;method. The&nbsp;<code style="margin: 0px; padding: 0px;">System.out.println()</code>&nbsp;method actually requires quite a lot of code, but it is all stored for us in the System libraries. Thus rather than including that code every time we need to print, we just call the<code style="margin: 0px; padding: 0px;">System.out.println()</code>&nbsp;method.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    You can write and call your own methods too. Methods begin with a declaration. This can include three to five parts. First is an optional access specifier which can be public, private or protected. A&nbsp;<b style="margin: 0px; padding: 0px;">public</b>&nbsp;method can be called from pretty much anywhere. A<b style="margin: 0px; padding: 0px;">&nbsp;private</b>&nbsp;method can only be used within the class where it is defined. A<b style="margin: 0px; padding: 0px;">protected</b>&nbsp;method can be used anywhere within the package in which it is defined. Methods that aren&#39;t specifically declared public or private are protected by default.&nbsp;<dfn style="margin: 0px; padding: 0px;">access specifier.&nbsp;</dfn>We then decide whether the method is or is not static. Static methods have only one instance per class rather than one instance per object. All objects of the same class share a single copy of a static method. By default methods are not static. We finally specify the&nbsp;<dfn style="margin: 0px; padding: 0px;">return type</dfn>.&nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Next is the name of the method.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;">Source Code</u></p>
+<pre style="margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(51, 51, 51);">
+<code style="margin: 0px; padding: 0px;">class FactorialTest {    //</code>calculates the factorial of that number.<code style="margin: 0px; padding: 0px;">
+
+    public static void main(String args[]) {
+
+    int n;
+    int i;
+    long result;
+
+    for (i=1; i &lt;=10; i++)  {
+    result = factorial(i);
+    System.out.println(result);
+    }
+
+    } // main ends here
+
+
+    static long factorial (int n) {
+
+    int i;
+    long result=1;
+
+    for (i=1; i &lt;= n; i++) {
+    result *= i;
+    }
+
+    return result;
+
+    } // factorial ends here
+
+
+    }</code></pre>
+<h4 style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <a name="xtocid1903615" style="margin: 0px; padding: 0px; background-image: initial; background-position: initial; background-repeat: initial;">Recursive Methods</a></h4>
+<h2>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">Recursion is used when a problem can be reduced into one or several problems of the same nature, but a smaller size. This process is usually repeated until a boundary situation is reached, where the problem can be directly solved. Java supports recursive methods, i.e. even if you&#39;re already inside methodA() you can call methodA().&nbsp;</span></h2>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <i style="margin: 0px; padding: 0px;">Example&nbsp; (A Recursive Counterpart of the Above Factorial Method)</i></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    n! is defined as n times n-1 times n-2 times n-3 ... times 2 times 1 where n is a positive integer. 0! is defined as 1. As you see n! = n time (n-1)!. This lends itself to recursive calculation, as in the following method:</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;"><font face="Verdana" style="margin: 0px; padding: 0px;">public static long factorial (int n) {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp; if (n &lt; 0) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; return -1;<br style="margin: 0px; padding: 0px;" />
+        &nbsp; }&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp; else if (n == 0) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; return 1;<br style="margin: 0px; padding: 0px;" />
+        &nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp; else {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; return n*factorial(n-1);<br style="margin: 0px; padding: 0px;" />
+        &nbsp; }<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        }</font></code></p>

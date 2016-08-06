@@ -1,0 +1,170 @@
+<h2>
+    &nbsp;</h2>
+<p align="center" style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <font color="#FF0000" style="margin: 0px; padding: 0px;"><b style="margin: 0px; padding: 0px;"><u style="margin: 0px; padding: 0px;">Classes and Objects</u></b></font></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Following the principles of&nbsp;&nbsp;(OOP), everything in Java is either a class, a part of a class, or describes how a class behaves. Objects are the physical instantiations of classes. They are living entities within a program that have independent lifecycles and that are created according to the class that describes them. Just as many buildings can be built from one blueprint, many objects can be instantiated from one class. Many objects of different classes can be created, used, and destroyed in the course of executing a program. Programming languages provide a number of simple data types like int, float and String. However very often the data you want to work with may not be simple ints, floats or Strings. Classes let programmers define their own more complicated data types.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    All the action in Java programs takes place inside class blocks, in this case the HelloWorld class. In Java almost everything of interest is either a class itself or belongs to a class. Methods are defined inside the classes they belong to. Even basic data primitives like integers often need to be incorporated into classes before you can do many useful things with them. The class is the fundamental unit of Java programs. For instance consider the following Java program:<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <code style="margin: 0px; padding: 0px;"><font face="Verdana" style="margin: 0px; padding: 0px;">class HelloWorld {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp; public static void main (String args[]) {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; System.out.println(&quot;Hello World&quot;);<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp; }<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        }<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        class GoodbyeWorld {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp; public static void main (String args[]) {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; System.out.println(&quot;Goodbye Cruel World!&quot;);<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp; }<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        }</font></code><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    Save this code in a single file called hellogoodbye.java in your javahtml directory, and compile it with the command javac hellogoodbye.java. Then list the contents of the directory. You will see that the compiler has produced two separate class files, HelloWorld.class and GoodbyeWorld.class.&nbsp;<kbd style="margin: 0px; padding: 0px;">javac hellogoodbye.java</kbd></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    The second class is a completely independent program. Type&nbsp;<kbd style="margin: 0px; padding: 0px;">java GoodbyeWorld</kbd>&nbsp;and then type&nbsp;<kbd style="margin: 0px; padding: 0px;">java HelloWorld</kbd>. These programs run and execute independently of each other although they exist in the same source code file.&nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;">Class Syntax</u></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Use the following syntax to declare a class in Java:<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    //Contents of SomeClassName.java<br style="margin: 0px; padding: 0px;" />
+    [ public ] [ ( abstract | final ) ] class SomeClassName [ extends SomeParentClass ] [ implements SomeInterfaces ]<br style="margin: 0px; padding: 0px;" />
+    {<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // variables and methods are declared within the curly braces<br style="margin: 0px; padding: 0px;" />
+    }<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    * A class can have public or default (no modifier) visibility.<br style="margin: 0px; padding: 0px;" />
+    * It can be either abstract, final or concrete (no modifier).<br style="margin: 0px; padding: 0px;" />
+    * It must have the class keyword, and class must be followed by a legal identifier.<br style="margin: 0px; padding: 0px;" />
+    * It may optionally extend one parent class. By default, it will extend java.lang.Object.<br style="margin: 0px; padding: 0px;" />
+    * It may optionally implement any number of comma-separated interfaces.<br style="margin: 0px; padding: 0px;" />
+    * The class&#39;s variables and methods are declared within a set of curly braces &#39;{}&#39;.<br style="margin: 0px; padding: 0px;" />
+    * Each .java source file may contain only one public class. A source file may contain any number of default visible classes.<br style="margin: 0px; padding: 0px;" />
+    * Finally, the source file name must match the public class name and it must have a .java suffix.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    Here is an example of a Horse class. Horse is a subclass of Mammal, and it implements the Hoofed interface.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    public class Horse extends Mammal implements Hoofed<br style="margin: 0px; padding: 0px;" />
+    {<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //Horse&#39;s variables and methods go here<br style="margin: 0px; padding: 0px;" />
+    }</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Lets take one more example of Why use Classes and Objects. For instance let&#39;s suppose your program needs to keep a database of web sites. For each site you have a name, a URL, and a description.&nbsp;</p>
+<pre style="margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(51, 51, 51);">
+<code style="margin: 0px; padding: 0px;">class website {
+
+    String name;
+    String url;
+    String description;
+
+    }
+</code></pre>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">These variables (name, url and description) are called the members of the class. They tell you what a class is and what its properties are. They are the nouns of the class.&nbsp;</span><dfn style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">members.&nbsp;</dfn><span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">A class defines what an object is, but it is not itself an object. An object is a specific&nbsp;</span><dfn style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">instance</dfn><span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">&nbsp;of a class. Thus when we create a new object we say we are&nbsp;</span><dfn style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">instantiating</dfn><span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">&nbsp;the object. Each class exists only once in a program, but there can be many thousands of objects that are instances of that class.</span></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    To instantiate an object in Java we use the&nbsp;<code style="margin: 0px; padding: 0px;">new</code>&nbsp;operator. Here&#39;s how we&#39;d create a new web site:</p>
+<pre style="margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(51, 51, 51);">
+<code style="margin: 0px; padding: 0px;">    website x = new website();
+</code></pre>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">Once we&#39;ve got a website we want to know something about it. To get at the member variables of the website we can use the . operator. Website has three member variables, name, url and description, so x has three member variables as well, x.name, x.url and x.description. We can use these just like we&#39;d use any other String variables. For instance:</span><br style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;" />
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">&nbsp;</span></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp; website x = new website();&nbsp;&nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; x.name = &quot;freehavaguide.com&quot;;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; x.url = &quot;http://www.freejavaguide.com&quot;;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; x.description = &quot;A Java Programming Website&quot;;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; System.out.println(x.name + &quot; at &quot; + x.url + &quot; is &quot; + x.description);</code></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px;">
+    <font size="2" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana;">1</font></p>
+<p align="center" style="margin: 0px 0px 1.5em; padding: 0px;">
+    <b style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">JAVA Tutorial - Class Declaration</b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px;">
+    <font size="2" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana;"><i style="margin: 0px; padding: 0px;">A simple Java class declaration with constructor declaration:</i></font></p>
+<pre style="margin-top: 0px; margin-bottom: 0px; padding: 0px;">
+class simple {
+// Constructor
+  simple(){
+  p = 1;
+  q = 2;
+  r = 3;
+}
+int p,q,r;
+}</pre>
+<p style="margin: 0px 0px 1.5em; padding: 0px;">
+    <font size="2" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana;"><i style="margin: 0px; padding: 0px;">In class declaration, you can declare methods of the class:</i></font></p>
+<pre style="margin-top: 0px; margin-bottom: 0px; padding: 0px;">
+class simple {
+// Constructor
+  simple(){
+   p = 1;
+   q = 2;
+   r = 3;
+  }
+  int p,q,r;
+  public int addNumbers(int var1, int var2, int var3)
+  {
+    return var1 + var2 + var3;
+  }
+  public void displayMessage()
+  {
+ 		System.out.println(&quot;Display Message&quot;);
+  }
+}<i style="margin: 0px; padding: 0px;">
+
+    To invoke the class, you can create the new instance of the class:</i></pre>
+<p style="margin: 0px 0px 1.5em; padding: 0px;">
+    <font size="2" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana;">// To create a new instance class</font></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <font size="2" style="margin: 0px; padding: 0px;">Simple sim =&nbsp;</font><b style="margin: 0px; padding: 0px;"><font size="2" style="margin: 0px; padding: 0px;">new&nbsp;</font></b><font size="2" style="margin: 0px; padding: 0px;">Simple();</font></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px;">
+    <font size="2" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana;">// To access the methods of the class</font></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px;">
+    <font size="2" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana;">sim.addNumbers(5,1,2)</font></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px;">
+    <font size="2" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana;">// To show the result of the addNumbers</font></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;"><font size="2" style="margin: 0px; padding: 0px;">System.out.println</font></b><font size="2" style="margin: 0px; padding: 0px;">(&quot;The result is &quot; + Integer.toString(addNumbers(5,1,2)));</font></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px;">
+    <font size="2" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana;"><i style="margin: 0px; padding: 0px;">The complete listing of class declaration:</i></font></p>
+<pre style="margin-top: 0px; margin-bottom: 0px; padding: 0px;">
+class simple {
+// Constructor
+	simple(){
+	 p = 1;
+	 q = 2;
+	 r = 3;
+	}
+	int p,q,r;
+	public int addNumbers(int var1, int var2, int var3)
+	{
+		return var1 + var2 + var3;
+	}
+	public void displayMessage()
+	{
+		System.out.println(&quot;Display Message&quot;);
+	}
+}
+
+class example1{
+	public static void main(String args[])
+	{
+		// To create a new instance class
+		Simple sim = new Simple();
+		// To show the result of the addNumbers
+		System.out.println(&quot;The result is &quot; + Integer.toString(addNumbers(5,1,2)));
+		// To display message
+		sim.displayMessage();
+	}
+}</pre>

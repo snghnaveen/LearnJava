@@ -1,0 +1,123 @@
+<h2>
+    &nbsp;</h2>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;"><u style="margin: 0px; padding: 0px;">JAVA String Utility</u></b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    ( This program Demonstrates the proper use of Number Formats in common java programming scenarios )</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;"><u style="margin: 0px; padding: 0px;">String Utility</u></b></p>
+<pre style="margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(51, 51, 51);">
+/*
+ * NumberUtility.java
+ *
+ *  Source:  http://www.freejavaguide.com
+ */
+
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
+
+/**
+ * Class provides common functions on number formats.
+ */
+
+public class NumberUtility {
+
+    /**
+     * Method takes Object as parameter and returns decimal number.
+     * if argument is float or double and contains tailing zeros
+     * it removes them. If argument is float or double then no change in return type.
+     * Change the Format of the Number by changing the String Pattern
+     */
+    public static String changeToDecimalFormat(Object number) {
+
+        BigDecimal bdNumber = new BigDecimal(number.toString());
+        bdNumber = bdNumber.stripTrailingZeros();           //Returns a BigDecimal with any trailing zero&#39;s removed
+        String pattern = &quot;###,##0.0###########&quot;;		//To apply formatting when the number of digits in input equals the pattern
+        DecimalFormat newFormat = new DecimalFormat(pattern, new DecimalFormatSymbols(Locale.US));
+        return newFormat.format(bdNumber);
+
+    }
+
+    /* Method takes Object as parameter and removes commas from the parameter */
+    public static double removeCommasFromNumber(Object number) {
+        try {
+            StringBuffer inputNo = new StringBuffer(number.toString());
+            if (inputNo.length() &gt; 0) {
+                while (inputNo.indexOf(&quot;,&quot;) != -1) {
+                    inputNo.deleteCharAt(inputNo.indexOf(&quot;,&quot;));
+                }
+            } else {
+                return 0.0;
+            }
+            return Double.parseDouble(inputNo.toString());
+
+        } catch (NumberFormatException e) {
+            return 0.0;
+        }
+    }
+
+    /* Some times its required to have a fixed set of decimal places for a
+     * number. We can set that by changing the precision number for a particular
+     * input BigDecimal Input String
+     */
+    public static String changeToRequiredDecimals(String bigDecimalString,
+            int precision) {
+        String newFormattedString = null;
+        String afterDecimal = null;
+        if (bigDecimalString == null || bigDecimalString.length() == 0) {
+            return &quot;0.0&quot;;
+        }
+        if (bigDecimalString.contains(&quot;.&quot;)) {
+            afterDecimal = bigDecimalString.substring(bigDecimalString
+                    .indexOf(&quot;.&quot;) + 1);
+            int length = Math.abs((afterDecimal.length() - precision));
+            if (afterDecimal.length() &lt; precision) {
+                newFormattedString = bigDecimalString;
+                for (int i = 0; i &lt; length; i++) {
+                    newFormattedString = newFormattedString + &quot;0&quot;;
+                }
+            } else if (afterDecimal.length() &gt; precision) {
+                newFormattedString = bigDecimalString.substring(0,
+                        bigDecimalString.length() - length);
+                if (precision == 0) {
+                    newFormattedString = newFormattedString.substring(0,
+                            newFormattedString.indexOf(&quot;.&quot;));
+	            } else {
+	                newFormattedString = bigDecimalString;
+	            }
+
+	        } else {
+		            if (precision &gt; 0)
+		                newFormattedString = bigDecimalString + &quot;.&quot;;
+		            else
+		                newFormattedString = bigDecimalString;
+		            for (int i = 0; i &lt; precision; i++) {
+		                newFormattedString = newFormattedString + &quot;0&quot;;
+		            }
+	        }
+        }
+        return newFormattedString;
+    }
+
+    public static void main(String args[]){
+    	int intVar = 10;
+    	double doubleVar = 10.504000;
+    	float floatVar = 343534534348.5687654F;
+    	String commaString = &quot;343,534,535,000.0&quot;;
+    	BigDecimal bdNumber = new BigDecimal(&quot;1234.8765&quot;);
+
+
+    	System.out.println(NumberUtility.changeToDecimalFormat(new Integer(intVar)));
+    	System.out.println(NumberUtility.changeToDecimalFormat(new Double(doubleVar)));
+    	System.out.println(NumberUtility.changeToDecimalFormat(new Float(floatVar)));
+
+    	System.out.println(NumberUtility.removeCommasFromNumber(commaString));
+
+    	System.out.println(NumberUtility.changeToRequiredDecimals(bdNumber.toString(), 8));
+
+    }
+}</pre>
+<div>
+    &nbsp;</div>

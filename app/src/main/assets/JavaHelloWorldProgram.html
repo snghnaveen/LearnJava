@@ -1,0 +1,64 @@
+<p align="center" style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;"><font color="#FF0000" style="margin: 0px; padding: 0px;">Java Hello World Program</font></b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Our first application will be extremely simple - the obligatory&nbsp;<u style="margin: 0px; padding: 0px;">&quot;Hello World&quot;.</u>&nbsp;The following is the Hello World Application as written in Java. Type it into a text file or copy it out of your web browser, and save it as a file named&nbsp;<i style="margin: 0px; padding: 0px;">HelloWorld.java</i>. This program demonstrates the text output function of the Java programming language by displaying the message &quot;Hello world!&quot;. Java compilers expect the filename to match the class name.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    A java program is defined by a public class that takes the form:</p>
+<pre style="margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(51, 51, 51);">
+ public class <b style="margin: 0px; padding: 0px;">program-name</b> {
+
+                <b style="margin: 0px; padding: 0px;">optional variable declarations and methods</b>
+
+                public static void main(String[] args) {
+                   <b style="margin: 0px; padding: 0px;">statements</b>
+                }
+
+                <b style="margin: 0px; padding: 0px;">optional variable declarations and methods</b>
+
+            }</pre>
+<p>
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;">Source Code</u></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    In your favorite editor, create a file called HelloWorld.java with the following contents:</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px;">
+    <font color="#000080" style="margin: 0px; padding: 0px; font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">/**&nbsp;<i style="margin: 0px; padding: 0px;">Comment</i><br style="margin: 0px; padding: 0px;" />
+        &nbsp;* Displays &quot;Hello World!&quot; to the standard output.<br style="margin: 0px; padding: 0px;" />
+        &nbsp;*/</font></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <font color="#000080" style="margin: 0px; padding: 0px;"><code style="margin: 0px; padding: 0px;">class HelloWorld {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp; public static void main (String args[]) {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; System.out.println(&quot;Hello World!&quot;);&nbsp;&nbsp; //Displays the enclosed String on the Screen Console<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        }</code></font><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    To compile Java code, we need to use the &#39;javac&#39; tool. From a command line, the command to&nbsp;<u style="margin: 0px; padding: 0px;">compile</u>&nbsp;this program is:<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    javac HelloWorld.java<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    For this to work, the javac must be in your shell&#39;s path or you must explicitly specify the path to the program (such as c:\j2se\bin\javac HelloWork.java). If the compilation is successful, javac will quietly end and return you to a command prompt. If you look in the directory, there will now be a HelloWorld.class file. This file is the compiled version of your program. Once your program is in this form, its ready to run. Check to see that a class file has been created. If not, or you receive an error message, check for typographical errors in your source code.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    You&#39;re ready to run your first Java application. To<u style="margin: 0px; padding: 0px;">&nbsp;run the program</u>, you just run it with the java command:<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    java HelloWorld<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <u style="margin: 0px; padding: 0px;">Sample Run</u><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    Hello world!</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    The source file above should be saved as myfirstjavaprog.java, using any standard text editor capable of saving as ASCII (eg - Notepad, Vi). As an alternative, you can download the source for this tutorial.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <code style="margin: 0px; padding: 0px;">HelloWorld.java<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        <b style="margin: 0px; padding: 0px;"><font color="#FF0000" style="margin: 0px; padding: 0px;">Note:&nbsp;</font></b>It is important to note that you use the full name with extension when compiling (javac HelloWorld.java) but only the class name when running (java HelloWorld).</code><br style="margin: 0px; padding: 0px;" />
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;"><b style="margin: 0px; padding: 0px;">You&#39;ve just written your first Java program! Congratulations!!</b></code></p>

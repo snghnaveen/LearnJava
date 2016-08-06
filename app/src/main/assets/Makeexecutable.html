@@ -1,0 +1,45 @@
+<h2>
+    &nbsp;</h2>
+<p align="center" style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;"><font color="#FF0000" style="margin: 0px; padding: 0px;">How to make executable jar files in JDK1.3.1?</font></b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;">Instructions for creating an Executable .jar file</u></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Make or modify the Manifest.MF to YourManifest.MF.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    1) YourClassNameWithMain is the class name (case sensitive) without .class extension<br style="margin: 0px; padding: 0px;" />
+    2) No extra spaces following the YourClassName withMain.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    Manifest-Version:1.0<br style="margin: 0px; padding: 0px;" />
+    Main-Class: YourClassNameWithMain<br style="margin: 0px; padding: 0px;" />
+    Created-by:1.2(Sun Microsystems Inc.)<br style="margin: 0px; padding: 0px;" />
+    On Command line : type the following<br style="margin: 0px; padding: 0px;" />
+    jar cvfm YourJarFileName.jar YourManifest.MF*<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    or<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    jar cvfm YourJarFileName.jar YourManifest.MF -C classes yourClassPath<br style="margin: 0px; padding: 0px;" />
+    Drag-drop the YourJarFileName.jar to your desktop double click it, it runs<br style="margin: 0px; padding: 0px;" />
+    If your program only has System.out.println (&quot;whatever&quot;); statements, it will<br style="margin: 0px; padding: 0px;" />
+    display nothing. The same will happen when you run it useing java at command line&nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    You need some windows code to see it run</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Instructions for creating a .jar file. jar utility comes with your JDK1.2.2 It compresses your file similar to zip utility, and more Java.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    You can use it on any machine installed JDK&nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Create a folder name it anything<br style="margin: 0px; padding: 0px;" />
+    Make that folder your current directory<br style="margin: 0px; padding: 0px;" />
+    put all your files for turning in (do not put any extra) in that directory.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    Be sure to put your html file, if there is one<br style="margin: 0px; padding: 0px;" />
+    At your dos prompt, while you are in the directory that you created , type in:<br style="margin: 0px; padding: 0px;" />
+    jar cvf Prj02.jar*</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    This will take ALL the files in the directory including subdirectories and place them in a .jar file Prj02 that can be replaced by any of your desired jar file name.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    To test it, you can extract the contents of jar file by typing:<br style="margin: 0px; padding: 0px;" />
+    jar xvf Prj02.jar&nbsp;</p>

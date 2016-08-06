@@ -1,0 +1,224 @@
+<h2>
+    &nbsp;</h2>
+<p align="center" style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;"><font color="#FF0000" style="margin: 0px; padding: 0px;"><u style="margin: 0px; padding: 0px;">Arrays</u></font></b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Arrays are generally effective means of storing groups of variables. An array is a group of variables that share the same name and are ordered sequentially from zero to one less than the number of variables in the array. The number of variables that can be stored in an array is called the array&#39;s&nbsp;<dfn style="margin: 0px; padding: 0px;">dimension</dfn>. Each variable in the array is called an&nbsp;<dfn style="margin: 0px; padding: 0px;">element</dfn>&nbsp;of the array.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Creating Arrays<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    There are three steps to creating an array, declaring it, allocating it and initializing it.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <u style="margin: 0px; padding: 0px;">Declaring Arrays</u><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    Like other variables in Java, an array must have a specific type like byte, int, String or double. Only variables of the appropriate type can be stored in an array. You cannot have an array that will store both ints and Strings, for instance.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    Like all other variables in Java an array must be declared. When you declare an array variable you suffix the type with&nbsp;<code style="margin: 0px; padding: 0px;">[]</code>&nbsp;to indicate that this variable is an array. Here are some examples:</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;">int[] k;<br style="margin: 0px; padding: 0px;" />
+        float[] yt;<br style="margin: 0px; padding: 0px;" />
+        String[] names;</code></p>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">In other words you declare an array like you&#39;d declare any other variable except you append brackets to the end of the variable type.</span></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;">Allocating Arrays</u></p>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">Declaring an array merely says what it is. It does not create the array. To actually create the array (or any other object) use the new operator. When we create an array we need to tell the compiler how many elements will be stored in it. Here&#39;s how we&#39;d create the variables declared above:&nbsp;</span><code style="margin: 0px; padding: 0px; color: rgb(51, 51, 51);">new</code></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;">k = new int[3];<br style="margin: 0px; padding: 0px;" />
+        yt = new float[7];<br style="margin: 0px; padding: 0px;" />
+        names = new String[50];</code></p>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">The numbers in the brackets specify the dimension of the array; i.e. how many slots it has to hold values. With the dimensions above k can hold three ints, yt can hold seven floats and names can hold fifty Strings.&nbsp;</span></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;">Initializing Arrays</u></p>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">Individual elements of the array are referenced by the array name and by an integer which represents their position in the array. The numbers we use to identify them are called subscripts or indexes into the array. Subscripts are consecutive integers beginning with 0. Thus the array k above has elements k[0], k[1], and k[2]. Since we started counting at zero there is no k[3], and trying to access it will generate an ArrayIndexOutOfBoundsException.&nbsp;</span><dfn style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">subscripts</dfn><span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">&nbsp;</span><dfn style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">indexes</dfn><span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">&nbsp;</span><code style="margin: 0px; padding: 0px; color: rgb(51, 51, 51);">k</code><span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">&nbsp;</span><code style="margin: 0px; padding: 0px; color: rgb(51, 51, 51);">k[0]</code><span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">&nbsp;</span><code style="margin: 0px; padding: 0px; color: rgb(51, 51, 51);">k[1]</code><span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">&nbsp;</span><code style="margin: 0px; padding: 0px; color: rgb(51, 51, 51);">k[2]</code><code style="margin: 0px; padding: 0px; color: rgb(51, 51, 51);">k[3]</code><span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">&nbsp;</span><code style="margin: 0px; padding: 0px; color: rgb(51, 51, 51);">ArrayIndexOutOfBoundsException</code></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    You can use array elements wherever you&#39;d use a similarly typed variable that wasn&#39;t part of an array.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Here&#39;s how we&#39;d store values in the arrays we&#39;ve been working with:</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;">k[0] = 2;<br style="margin: 0px; padding: 0px;" />
+        k[1] = 5;<br style="margin: 0px; padding: 0px;" />
+        k[2] = -2;<br style="margin: 0px; padding: 0px;" />
+        yt[6] = 7.5f;<br style="margin: 0px; padding: 0px;" />
+        names[4] = &quot;Fred&quot;;</code></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    This step is called initializing the array or, more precisely, initializing the elements of the array. Sometimes the phrase &quot;initializing the array&quot; would be reserved for when we initialize all the elements of the array.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    For even medium sized arrays, it&#39;s unwieldy to specify each element individually. It is often helpful to use&nbsp;<code style="margin: 0px; padding: 0px;">for</code>&nbsp;loops to initialize the array. For instance here is a loop that fills an array with the squares of the numbers from 0 to 100.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;">float[] squares = new float[101];<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        for (int i=0; i &lt;= 500; i++) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp; squares[i] = i*2;<br style="margin: 0px; padding: 0px;" />
+        }</code></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;">Shortcuts</u></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    We can declare and allocate an array at the same time like this:</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;">int[] k = new int[3];<br style="margin: 0px; padding: 0px;" />
+        float[] yt = new float[7];<br style="margin: 0px; padding: 0px;" />
+        String[] names = new String[50];</code></p>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">We can even declare, allocate, and initialize an array at the same time providing a list of the initial values inside brackets like so:</span></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;">int[] k = {1, 2, 3};<br style="margin: 0px; padding: 0px;" />
+        float[] yt = {0.0f, 1.2f, 3.4f, -9.87f, 65.4f, 0.0f, 567.9f};</code></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <a name="xtocid459715" style="margin: 0px; padding: 0px; background-image: initial; background-position: initial; background-repeat: initial;">Two Dimensional Arrays</a></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Declaring, Allocating and Initializing Two Dimensional Arrays</p>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">Two dimensional arrays are declared, allocated and initialized much like one dimensional arrays. However we have to specify two dimensions rather than one, and we typically use two nested for loops to fill the array.&nbsp;</span><code style="margin: 0px; padding: 0px; color: rgb(51, 51, 51);">for</code></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    The array examples above are filled with the sum of their row and column indices. Here&#39;s some code that would create and fill such an array:</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;"><font face="Verdana" style="margin: 0px; padding: 0px;">class FillArray {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp; public static void main (String args[]) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; int[][] M;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; M = new int[4][5];<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; for (int row=0; row &lt; 4; row++) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (int col=0; col &lt; 5; col++) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M[row][col] = row+col;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        }</font></code></p>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">In two-dimensional arrays ArrayIndexOutOfBounds errors occur whenever you exceed the maximum column index or row index. Unlike two-dimensional C arrays, two-dimensional Java arrays are not just one-dimensional arrays indexed in a funny way.</span></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <a name="xtocid2801933" style="margin: 0px; padding: 0px; background-image: initial; background-position: initial; background-repeat: initial;">Multidimensional Arrays</a></p>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">You don&#39;t have to stop with two dimensional arrays. Java lets you have arrays of three, four or more dimensions. However chances are pretty good that if you need more than three dimensions in an array, you&#39;re probably using the wrong data structure. Even three dimensional arrays are exceptionally rare outside of scientific and engineering applications.</span></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    The syntax for three dimensional arrays is a direct extension of that for two-dimensional arrays. Here&#39;s a program that declares, allocates and initializes a three-dimensional array:</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;"><font face="Verdana" style="margin: 0px; padding: 0px;">class Fill3DArray {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp; public static void main (String args[]) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; int[][][] M;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; M = new int[4][5][3];<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; for (int row=0; row &lt; 4; row++) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (int col=0; col &lt; 5; col++) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (int ver=0; ver &lt; 3; ver++) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M[row][col][ver] = row+col+ver;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        }</font></code></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;">Example 1 : declaring and initializing 1-dimensional arrays</u><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    An array groups elements of the same type. It makes it easy to manipulate the information contained in them.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <font face="Verdana" style="margin: 0px; padding: 0px;">class Arrays1{&nbsp;<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        public static void main(String args[]){<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        // this declares an array named x with the type &quot;array of int&quot; and of&nbsp;<br style="margin: 0px; padding: 0px;" />
+        // size 10, meaning 10 elements, x[0], x[1] , ... , x[9] ; the first term<br style="margin: 0px; padding: 0px;" />
+        // is x[0] and the last term x[9] NOT x[10].<br style="margin: 0px; padding: 0px;" />
+        int x[] = new int[10];<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        // print out the values of x[i] and they are all equal to 0.<br style="margin: 0px; padding: 0px;" />
+        for(int i=0; i&lt;=9; i++)<br style="margin: 0px; padding: 0px;" />
+        System.out.println(&quot;x[&quot;+i+&quot;] = &quot;+x[i]);<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        // assign values to x[i]&nbsp;<br style="margin: 0px; padding: 0px;" />
+        for(int i=0; i&lt;=9; i++)<br style="margin: 0px; padding: 0px;" />
+        x[i] = i; // for example<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        // print the assigned values of x[i] : 1,2,......,9<br style="margin: 0px; padding: 0px;" />
+        for(int i=0; i&lt;=9; i++)<br style="margin: 0px; padding: 0px;" />
+        System.out.println(&quot;x[&quot;+i+&quot;] = &quot;+x[i]);<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        // this declares an array named st the type &quot;array of String&quot;<br style="margin: 0px; padding: 0px;" />
+        // and initializes it<br style="margin: 0px; padding: 0px;" />
+        String st[]={&quot;first&quot;,&quot;second&quot;,&quot;third&quot;};<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        // print out st[i]<br style="margin: 0px; padding: 0px;" />
+        for(int i=0; i&lt;=2; i++)<br style="margin: 0px; padding: 0px;" />
+        System.out.println(&quot;st[&quot;+i+&quot;] = &quot;+st[i]);<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        }<br style="margin: 0px; padding: 0px;" />
+        }</font><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <u style="margin: 0px; padding: 0px;">Example 2 : Find the sum of the numbers 2.5, 4.5, 8.9, 5.0 and 8.9</u><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <font face="Verdana" style="margin: 0px; padding: 0px;">class Arrays2{&nbsp;<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        public static void main(String args[]){<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        // this declares an array named fl with the type &quot;array of int&quot; and<br style="margin: 0px; padding: 0px;" />
+        // initialize its elements<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        float fl[] = {2.5f, 4.5f, 8.9f, 5.0f, 8.9f};<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        // find the sum by adding all elements of the array fl<br style="margin: 0px; padding: 0px;" />
+        float sum = 0.0f;<br style="margin: 0px; padding: 0px;" />
+        for(int i=0; i&lt;= 4; i++)<br style="margin: 0px; padding: 0px;" />
+        sum = sum + fl[i];<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        // displays the sum<br style="margin: 0px; padding: 0px;" />
+        System.out.println(&quot;sum = &quot;+sum);<br style="margin: 0px; padding: 0px;" />
+        }<br style="margin: 0px; padding: 0px;" />
+        }</font><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    Check that the sum displayed is 29.8.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <u style="margin: 0px; padding: 0px;">Example 3 : declaring and initializing 2-dimensional arrays</u><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <font face="Verdana" style="margin: 0px; padding: 0px;">class Arrays3{&nbsp;<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        public static void main(String args[]){<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        // this declares a 2-dimensional array named x[i][j] of size 4 (4 elements)<br style="margin: 0px; padding: 0px;" />
+        // its elements are x[0][0], x[0][1], x[1][0] and x[1][1].<br style="margin: 0px; padding: 0px;" />
+        // the first index i indicates the row and the second index indicates the<br style="margin: 0px; padding: 0px;" />
+        // column if you think of this array as a matrix.<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        int x[][] = new int[2][2];<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        // print out the values of x[i][j] and they are all equal to 0.0.<br style="margin: 0px; padding: 0px;" />
+        for(int i=0; i&lt;=1; i++)<br style="margin: 0px; padding: 0px;" />
+        for(int j=0; j&lt;=1; j++)<br style="margin: 0px; padding: 0px;" />
+        System.out.println(&quot;x[&quot;+i+&quot;,&quot;+j+&quot;] = &quot;+x[i][j]);<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        // assign values to x[i]&nbsp;<br style="margin: 0px; padding: 0px;" />
+        for(int i=0; i&lt;=1; i++)<br style="margin: 0px; padding: 0px;" />
+        for(int j=0; j&lt;=1; j++)<br style="margin: 0px; padding: 0px;" />
+        x[i][j] = i+j; // for example<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        // print the assigned values to x[i][j]&nbsp;<br style="margin: 0px; padding: 0px;" />
+        for(int i=0; i&lt;=1; i++)<br style="margin: 0px; padding: 0px;" />
+        for(int j=0; j&lt;=1; j++)<br style="margin: 0px; padding: 0px;" />
+        System.out.println(&quot;x[&quot;+i+&quot;,&quot;+j+&quot;] = &quot;+x[i][j]);<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        // this declares a 2-dimensional array of type String<br style="margin: 0px; padding: 0px;" />
+        // and initializes it<br style="margin: 0px; padding: 0px;" />
+        String st[][]={{&quot;row 0 column 0&quot;,&quot;row 0 column 1&quot;}, // first row&nbsp;<br style="margin: 0px; padding: 0px;" />
+        {&quot;row 1 column 0&quot;,&quot;row 1 column 1&quot;}}; // second row&nbsp;<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        // print out st[i]<br style="margin: 0px; padding: 0px;" />
+        for(int i=0; i&lt;=1; i++)<br style="margin: 0px; padding: 0px;" />
+        for(int j=0; j&lt;=1; j++)<br style="margin: 0px; padding: 0px;" />
+        System.out.println(&quot;st[&quot;+i+&quot;,&quot;+j+&quot;] = &quot;+st[i][j]);<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        }<br style="margin: 0px; padding: 0px;" />
+        }</font></p>

@@ -1,0 +1,227 @@
+<h2>
+    &nbsp;</h2>
+<p align="center" style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <font color="#FF0000" style="margin: 0px; padding: 0px;"><b style="margin: 0px; padding: 0px;">File I/O and Streams</b></font></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    You can write data to a file instead of the computer screen. You can write certain data to a file while still putting other data on the screen. Or you may need access to multiple files simultaneously. Or you may want to query the user for input rather than accepting it all on the command line. Or maybe you want to read data out of a file that&#39;s in a particular format. In Java all these methods take place as streams.&nbsp;<kbd style="margin: 0px; padding: 0px;">&lt;</kbd>&nbsp;<kbd style="margin: 0px; padding: 0px;">&gt;</kbd>&nbsp;Using File I/O&nbsp;<dfn style="margin: 0px; padding: 0px;">streams.</dfn>&nbsp;The&nbsp;<code style="margin: 0px; padding: 0px;">System.out.println()</code>&nbsp;statement we&#39;ve been using all along is an implementation of Streams.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;"><i style="margin: 0px; padding: 0px;">A program that writes a string to a file</i></u></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    In order to use the Java file classes, we must import the Java input/output package (java.io) in the following manner<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    import java.io.*;<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    Inside the main method of our program, we must declare a FileOutputStream object. In this case, we wish to write a string to the file, and so we create a new PrintStream object that takes as its constructor the existing FileOutputStream. Any data we send from PrintStream will now be passed to the FileOutputStream, and ultimately to disk. We then make a call to the println method, passing it a string, and then close the connection.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;">Source Code</u></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <font face="Verdana" style="margin: 0px; padding: 0px;">/*<br style="margin: 0px; padding: 0px;" />
+        * FileOutput<br style="margin: 0px; padding: 0px;" />
+        * Demonstration of FileOutputStream and PrintStream classes<br style="margin: 0px; padding: 0px;" />
+        */<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        import java.io.*;<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        class FileOutput&nbsp;<br style="margin: 0px; padding: 0px;" />
+        {&nbsp;<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        public static void main(String args[])<br style="margin: 0px; padding: 0px;" />
+        {&nbsp;<br style="margin: 0px; padding: 0px;" />
+        FileOutputStream out; // declare a file output object<br style="margin: 0px; padding: 0px;" />
+        PrintStream p; // declare a print stream object<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        try<br style="margin: 0px; padding: 0px;" />
+        {<br style="margin: 0px; padding: 0px;" />
+        // Create a new file output stream connected to &quot;myfile.txt&quot;<br style="margin: 0px; padding: 0px;" />
+        out = new FileOutputStream(&quot;myfile.txt&quot;);<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        // Connect print stream to the output stream<br style="margin: 0px; padding: 0px;" />
+        p = new PrintStream( out );<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        p.println (&quot;This is written to a file myFile.txt&quot;);<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        p.close();<br style="margin: 0px; padding: 0px;" />
+        }<br style="margin: 0px; padding: 0px;" />
+        catch (Exception e)<br style="margin: 0px; padding: 0px;" />
+        {<br style="margin: 0px; padding: 0px;" />
+        System.err.println (&quot;Error writing to the file myFile.txt&quot;);<br style="margin: 0px; padding: 0px;" />
+        }<br style="margin: 0px; padding: 0px;" />
+        }<br style="margin: 0px; padding: 0px;" />
+        }</font></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <a name="xtocid69323" style="margin: 0px; padding: 0px; background-image: initial; background-position: initial; background-repeat: initial;">Interactively communicating with the user</a></p>
+<p>
+    <i style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">Program asking&nbsp; the user for their name and then prints a personalized greeting.</i></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <font color="#000000" style="margin: 0px; padding: 0px;"><u style="margin: 0px; padding: 0px;">Source Code</u></font></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;"><font face="Verdana" style="margin: 0px; padding: 0px;">import java.io.*;<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        class PersonalHello {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp; public static void main (String args[])<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; byte name[] = new byte[100];<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int nr_read = 0;<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Your name Please?&quot;);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nr_read = System.in.read(name);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(&quot;Hello &quot;);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.write(name,0,nr_read);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; catch (IOException e) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(&quot;I did not get your name.&quot;);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        }</font></code></p>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">In code that does any significant input or output you&#39;ll want to begin by importing all the various java.io classes. import.java.io.*; Most of the reading and writing you do in Java will be done with bytes. Here we&#39;ve started with an array of bytes that will hold the user&#39;s name.</span></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    First we print a query requesting the user&#39;s name. Then we read the user&#39;s name using the&nbsp;<code style="margin: 0px; padding: 0px;">System.in.read()</code>&nbsp;method. This method takes a byte array as an argument, and places whatever the user types in that byte array. Then, like before, we print &quot;Hello.&quot; Finally we print the user&#39;s name.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    The program doesn&#39;t actually see what the user types until he or she types a carriage return. This gives the user the chance to backspace over and delete any mistakes. Once the return key is pressed, everything in the line is placed in the array.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <a name="xtocid181431" style="margin: 0px; padding: 0px; background-image: initial; background-position: initial; background-repeat: initial;">Reading Numbers</a></p>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">Often strings aren&#39;t enough. A lot of times you&#39;ll want to ask the user for a number as input. All user input comes in as strings so we need to convert the string into a number.</span></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    The&nbsp;<code style="margin: 0px; padding: 0px;">getNextInteger()</code>&nbsp;method that will accept an integer from the user. Here it is:</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;">&nbsp; static int getNextInteger() {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; String line;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; DataInputStream in = new DataInputStream(System.in);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; try {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; line = in.readLine();<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int i = Integer.valueOf(line).intValue();<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return i;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; catch (Exception e) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return -1;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp; } // getNextInteger ends here</code></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <a name="xtocid181432" style="margin: 0px; padding: 0px; background-image: initial; background-position: initial; background-repeat: initial;">Reading Formatted Data</a></p>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">It&#39;s often the case that you want to read not just one number but multiple numbers. Sometimes you may need to read text and numbers on the same line. For this purpose Java provides the StreamTokenizer class.</span></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <a name="xtocid69324" style="margin: 0px; padding: 0px; background-image: initial; background-position: initial; background-repeat: initial;">Writing a text file</a></p>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">Sometimes you want to save your output in a&nbsp; file. To do this we&#39;ll need to learn how to write data to a file.&nbsp;</span></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;"><font color="#000000" style="margin: 0px; padding: 0px;">Source Code</font></u></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;"><font face="Verdana" style="margin: 0px; padding: 0px;">// Write the Fahrenheit to Celsius table in a file<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        import java.io.*;<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        class FahrToCelsius&nbsp; {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp; public static void main (String args[]) {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; double fahr, celsius;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; double lower, upper, step;<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; lower = 0.0;&nbsp;&nbsp;&nbsp; // lower limit of temperature table<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; upper = 300.0;&nbsp; // upper limit of temperature table<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; step&nbsp; = 20.0;&nbsp;&nbsp; // step size<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; fahr = lower;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; try {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FileOutputStream fout =&nbsp; new FileOutputStream(&quot;test.out&quot;);<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // now to the FileOutputStream into a PrintStream<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PrintStream myOutput = new PrintStream(fout);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while (fahr &lt;= upper) {&nbsp; // while loop begins here<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; celsius = 5.0 * (fahr-32.0) / 9.0;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myOutput.println(fahr + &quot; &quot; + celsius);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fahr = fahr + step;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } // while loop ends here<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; }&nbsp; // try ends here<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; catch (IOException e) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Error: &quot; + e);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.exit(1);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp; } // main ends here<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        }</font></code></p>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">There are only three things necessary to write formatted output to a file rather than to the standard output:</span></p>
+<ol style="margin: 0.5em 0.5em 1.5em; padding-right: 0px; padding-left: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <li style="margin: 0px 0px 0px 1.4em; padding: 0px; line-height: 1.4em; list-style-type: decimal; background: none;">
+        Open a&nbsp;<dfn style="margin: 0px; padding: 0px;">FileOutputStream</dfn>&nbsp;using a line like
+        <p style="margin: 0px 0px 1.5em; padding: 0px;">
+            <code style="margin: 0px; padding: 0px;">FileOutputStream fout =&nbsp; new FileOutputStream(&quot;test.out&quot;);</code></p>
+        This line initializes the FileOutputStream with the name of the file you want to write into.</li>
+    <li style="margin: 0px 0px 0px 1.4em; padding: 0px; line-height: 1.4em; list-style-type: decimal; background: none;">
+        Convert the FileOutputStream into a&nbsp;<dfn style="margin: 0px; padding: 0px;">PrintStream</dfn>&nbsp;using a statement like
+        <p style="margin: 0px 0px 1.5em; padding: 0px;">
+            <code style="margin: 0px; padding: 0px;">PrintStream myOutput = new PrintStream(fout);</code></p>
+        <p style="margin: 0px 0px 1.5em; padding: 0px;">
+            The PrintStream is passed the FileOutputStream from step 1.</p>
+    </li>
+    <li style="margin: 0px 0px 0px 1.4em; padding: 0px; line-height: 1.4em; list-style-type: decimal; background: none;">
+        Instead of using&nbsp;<code style="margin: 0px; padding: 0px;">System.out.println()</code>&nbsp;use&nbsp;<code style="margin: 0px; padding: 0px;">myOutput.println()</code>.&nbsp;<code style="margin: 0px; padding: 0px;">System.out</code>&nbsp;and&nbsp;<code style="margin: 0px; padding: 0px;">myOutput</code>&nbsp;are just different instances of the&nbsp;<code style="margin: 0px; padding: 0px;">PrintStream</code>&nbsp;class. To print to a different&nbsp;<code style="margin: 0px; padding: 0px;">PrintStream</code>&nbsp;we keep the syntax the same but change the name of the&nbsp;<code style="margin: 0px; padding: 0px;">PrintStream</code>.</li>
+</ol>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <a name="xtocid69325" style="margin: 0px; padding: 0px; background-image: initial; background-position: initial; background-repeat: initial;">Reading a text file</a></p>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">Now that we know how to write a text file, let&#39;s try reading one. The following code accepts a series of file names on the command line and then prints those filenames to the standard output in the order they were listed.</span></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;"><font face="Verdana" style="margin: 0px; padding: 0px;">// Imitate the Unix cat utility<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        import java.io.*;<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        class cat&nbsp; {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp; public static void main (String args[]) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp; String thisLine;<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp; //Loop across the arguments<br style="margin: 0px; padding: 0px;" />
+        &nbsp; for (int i=0; i &lt; args.length; i++) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp; //Open the file for reading<br style="margin: 0px; padding: 0px;" />
+        &nbsp; try {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; FileInputStream fin =&nbsp; new FileInputStream(args[i]);<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; // now turn the FileInputStream into a DataInputStream<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; try {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DataInputStream myInput = new DataInputStream(fin);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while ((thisLine = myInput.readLine()) != null) {&nbsp; // while loop begins here<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(thisLine);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } // while loop ends here<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; catch (Exception e) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Error: &quot; + e);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; } // end try<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; catch (Exception e) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Error: &quot; + e);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp; } // end try<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp; catch (Exception e) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; System.out.println(&quot;failed to open file &quot; + args[i]);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; System.out.println(&quot;Error: &quot; + e);<br style="margin: 0px; padding: 0px;" />
+        &nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp; } // for end here<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp; } // main ends here<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        }</font></code>&nbsp;&nbsp;</p>

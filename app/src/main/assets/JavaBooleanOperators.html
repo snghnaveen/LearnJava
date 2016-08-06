@@ -1,0 +1,45 @@
+<h2>
+    &nbsp;</h2>
+<p align="center" style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;"><font color="#FF0000" style="margin: 0px; padding: 0px;">Java Boolean Operators</font></b></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    The Boolean logical operators are :&nbsp;<b style="margin: 0px; padding: 0px;">| , &amp; , ^ , ! , || , &amp;&amp; , == , != .&nbsp;</b>Java supplies a primitive data type called Boolean, instances of which can take the value true or false only, and have the default value false. The major use of Boolean facilities is to implement the expressions which control if decisions and while loops.<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    These operators act on Boolean operands according to this table</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<pre style="margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(51, 51, 51);">
+<b style="margin: 0px; padding: 0px;">A         B             A|B       A&amp;B      A^B      !A</b>
+<b style="margin: 0px; padding: 0px;">false     false         false     false    false    true
+    true      false         true      false    true     false
+    false     true          true      false    true     true
+    true      true          true      true     false    false</b></pre>
+<pre style="margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(51, 51, 51);">
+<b style="margin: 0px; padding: 0px;">|</b> the OR operator
+<b style="margin: 0px; padding: 0px;">&amp;</b> the AND operator
+<b style="margin: 0px; padding: 0px;"><font color="#FF0000" style="margin: 0px; padding: 0px;">^</font></b> the XOR operator
+<b style="margin: 0px; padding: 0px;"><font color="#FF0000" style="margin: 0px; padding: 0px;">!</font></b> the NOT operator
+<b style="margin: 0px; padding: 0px;"><font color="#FF0000" style="margin: 0px; padding: 0px;">||</font></b> the short-circuit OR operator
+<b style="margin: 0px; padding: 0px;"><font color="#FF0000" style="margin: 0px; padding: 0px;">&amp;&amp;</font></b> the short-circuit AND operator
+<b style="margin: 0px; padding: 0px;"><font color="#FF0000" style="margin: 0px; padding: 0px;">==</font></b> the EQUAL TO operator
+!= the NOT EQUAL TO operator&nbsp;</pre>
+<p align="left" style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <br style="margin: 0px; padding: 0px;" />
+    <font color="#000000" style="margin: 0px; padding: 0px;"><u style="margin: 0px; padding: 0px;">Example</u></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<pre style="margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(51, 51, 51);">
+<b style="margin: 0px; padding: 0px;"><font color="#000080" style="margin: 0px; padding: 0px;">class Bool1{&nbsp;
+    public static void main(String args[]){
+
+    // these are boolean variables&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    boolean A = true;
+    boolean B = false;&nbsp;
+
+    System.out.println(&quot;A|B = &quot;+(A|B));
+    System.out.println(&quot;A&amp;B = &quot;+(A&amp;B));
+    System.out.println(&quot;!A = &quot;+(!A));
+    System.out.println(&quot;A^B = &quot;+(A^B));
+    System.out.println(&quot;(A|B)&amp;A = &quot;+((A|B)&amp;A));
+    }
+    }</font></b></pre>

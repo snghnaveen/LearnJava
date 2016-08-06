@@ -1,0 +1,51 @@
+<h2>
+    &nbsp;</h2>
+<p align="center" style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <font color="#FF0000" style="margin: 0px; padding: 0px;"><b style="margin: 0px; padding: 0px;"><u style="margin: 0px; padding: 0px;">Java Loops (while, do-while and&nbsp; for loops)</u></b></font></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    A loop is a section of code that is executed repeatedly until a stopping condition is met. A typical loop may look like:<br style="margin: 0px; padding: 0px;" />
+    &nbsp;</p>
+<pre style="margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(51, 51, 51);">
+while there&#39;s more data {
+  Read a Line of Data
+  Do Something with the Data
+}
+</pre>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    There are many different kinds of loops in Java including&nbsp;<code style="margin: 0px; padding: 0px;">while</code>,&nbsp;<code style="margin: 0px; padding: 0px;">for</code>, and&nbsp;<code style="margin: 0px; padding: 0px;">do while</code>&nbsp;loops. They differ primarily in the stopping conditions used.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;">For</code>&nbsp;loops typically iterate a fixed number of times and then exit.&nbsp;<code style="margin: 0px; padding: 0px;">While</code>&nbsp;loops iterate continuously until a particular condition is met. You usually do not know in advance how many times a&nbsp;<code style="margin: 0px; padding: 0px;">while</code>&nbsp;loop will loop.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    In this case we want to write a loop that will print each of the command line arguments in succession, starting with the first one. We don&#39;t know in advance how many arguments there will be, but we can easily find this out before the loop starts using the&nbsp;<code style="margin: 0px; padding: 0px;">args.length</code>. Therefore we will write this with a&nbsp;<code style="margin: 0px; padding: 0px;">for</code>&nbsp;loop. Here&#39;s the code:</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;">Source Code</u></p>
+<pre style="margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(51, 51, 51);">
+<code style="margin: 0px; padding: 0px;"><font face="Verdana" style="margin: 0px; padding: 0px;">// This is the Hello program in Java
+    class Hello {
+
+    public static void main (String args[]) {
+
+    int i;
+
+    /* Now let&#39;s say hello */
+    System.out.print(&quot;Hello &quot;);
+    for (i=0; i &lt; args.length; i = i++) {
+    System.out.print(args[i]);
+    System.out.print(&quot; &quot;);
+    }
+    System.out.println();
+    }
+
+    }</font></code></pre>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">We begin the code by declaring our variables. In this case we have exactly one variable, the integer i.&nbsp;</span><code style="margin: 0px; padding: 0px; color: rgb(51, 51, 51);">i</code></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Then we begin the program by saying &quot;Hello&quot; just like before.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Next comes the&nbsp;<code style="margin: 0px; padding: 0px;">for</code>&nbsp;loop. The loop begins by initializing the counter variable&nbsp;<code style="margin: 0px; padding: 0px;">i</code>&nbsp;to be zero. This happens exactly once at the beginning of the loop. Programming tradition that dates back to Fortran insists that loop indices be named&nbsp;<code style="margin: 0px; padding: 0px;">i</code>,&nbsp;<code style="margin: 0px; padding: 0px;">j</code>,&nbsp;<code style="margin: 0px; padding: 0px;">k</code>,&nbsp;<code style="margin: 0px; padding: 0px;">l</code>,&nbsp;<code style="margin: 0px; padding: 0px;">m</code>&nbsp;and&nbsp;<code style="margin: 0px; padding: 0px;">n</code>&nbsp;in that order.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Next is the test condition. In this case we test that&nbsp;<code style="margin: 0px; padding: 0px;">i</code>&nbsp;is less than the number of arguments. When&nbsp;<code style="margin: 0px; padding: 0px;">i</code>&nbsp;becomes equal to the number of arguments, (<code style="margin: 0px; padding: 0px;">args.length</code>) we exit the loop and go to the first statement after the loop&#39;s closing brace. You might think that we should test for&nbsp;<code style="margin: 0px; padding: 0px;">i</code>&nbsp;being less than or equal to the number of arguments; but remember that we began counting at zero, not one.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Finally we have the increment step,&nbsp;<code style="margin: 0px; padding: 0px;">i++ (i=i+1)</code>. This is executed at the end of each iteration of the loop. Without this we&#39;d continue to loop forever since&nbsp;<code style="margin: 0px; padding: 0px;">i</code>&nbsp;would always be less than&nbsp;<code style="margin: 0px; padding: 0px;">args.length</code>.</p>

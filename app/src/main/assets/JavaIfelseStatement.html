@@ -1,0 +1,198 @@
+<h2>
+    &nbsp;</h2>
+<p align="center" style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <b style="margin: 0px; padding: 0px;"><u style="margin: 0px; padding: 0px;"><font color="#FF0000" style="margin: 0px; padding: 0px;">Java If-Else Statement</font></u></b></p>
+<p align="center" style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;"><i style="margin: 0px; padding: 0px;">The if-else class of statements should have the following form:</i></u><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    if (condition) {<br style="margin: 0px; padding: 0px;" />
+    statements;<br style="margin: 0px; padding: 0px;" />
+    }<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    if (condition) {<br style="margin: 0px; padding: 0px;" />
+    statements;<br style="margin: 0px; padding: 0px;" />
+    } else {<br style="margin: 0px; padding: 0px;" />
+    statements;<br style="margin: 0px; padding: 0px;" />
+    }<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    if (condition) {<br style="margin: 0px; padding: 0px;" />
+    statements;<br style="margin: 0px; padding: 0px;" />
+    } else if (condition) {<br style="margin: 0px; padding: 0px;" />
+    statements;<br style="margin: 0px; padding: 0px;" />
+    } else {<br style="margin: 0px; padding: 0px;" />
+    statements;<br style="margin: 0px; padding: 0px;" />
+    }</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    All programming languages have some form of an&nbsp;<code style="margin: 0px; padding: 0px;">if</code>&nbsp;statement that allows you to test conditions. All arrays have lengths and we can access that length by referencing the variable&nbsp;<code style="margin: 0px; padding: 0px;">arrayname.length</code>.&nbsp; We test the length of the&nbsp;<code style="margin: 0px; padding: 0px;">args</code>&nbsp;array as follows:</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    &nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;">Source Code</u></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;"><font face="Verdana" style="margin: 0px; padding: 0px;">// This is the Hello program in Java<br style="margin: 0px; padding: 0px;" />
+        class Hello {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; public static void main (String args[]) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* Now let&#39;s say hello */<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(&quot;Hello &quot;);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (args.length &gt; 0) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(args[0]);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp; }<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        }</font></code></p>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">Compile and run this program and toss different inputs at it. You should note that there&#39;s no longer an ArrayIndexOutOfBoundsException if you don&#39;t give it any command line arguments at all.</span></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    What we did was wrap the&nbsp;<code style="margin: 0px; padding: 0px;">System.out.println(args[0])</code>&nbsp;statement in a conditional test,&nbsp;<code style="margin: 0px; padding: 0px;">if (args.length &gt; 0) { }</code>. The code inside the braces,<code style="margin: 0px; padding: 0px;">System.out.println(args[0])</code>, now gets executed if and only if the length of the args array is greater than zero. In Java numerical greater than and lesser than tests are done with the &gt; and &lt; characters respectively. We can test for a number being less than or equal to and greater than or equal to with &lt;= and &gt;= respectively.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    Testing for equality is a little trickier. We would expect to test if two numbers were equal by using the = sign. However we&#39;ve already used the = sign to set the value of a variable. Therefore we need a new symbol to test for equality. Java borrows C&#39;s double equals sign, ==, to test for equality. Lets look at an example when there are more then 1 statement in a branch and how&nbsp;<b style="margin: 0px; padding: 0px;">braces</b>&nbsp;are used indefinitely.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;"><font color="#000000" style="margin: 0px; padding: 0px;">Source Code</font></u></p>
+<pre style="margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(51, 51, 51);">
+import java.io.*;
+class NumberTest
+{
+	public static void main (String[] args) throws IOException
+	{
+		BufferedReader stdin = new BufferedReader ( new InputStreamReader( System.in ) );
+
+		String inS;
+		int num;
+
+		System.out.println(&quot;Enter an integer number&quot;);
+		inS = stdin.readLine();
+		num = Integer.parseInt( inS ); // convert inS to int using wrapper classes
+
+		if ( num &lt; 0 )  // true-branch
+		{
+	      System.out.println(&quot;The number &quot; + num + &quot; is negative&quot;);
+		   System.out.println(&quot;negative number are less than zero&quot;);&nbsp;
+		}
+		else   // false-branch
+		{
+		   System.out.println(&quot;The number &quot; + num + &quot; is positive&quot;);
+		   System.out.print (&quot;positive numbers are greater &quot;);
+		   System.out.println(&quot;or equal to zero &quot;);
+		}
+		System.out.println(&quot;End of program&quot;); // always executed
+	}
+}
+        </pre>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    All conditional statements in Java require boolean values, and that&#39;s what the ==, &lt;, &gt;, &lt;=, and &gt;= operators all return. A boolean is a value that is either true or false. Unlike in C booleans are not the same as ints, and ints and booleans cannot be cast back and forth. If you need to set a boolean variable in a Java program, you have to use the constants&nbsp;<code style="margin: 0px; padding: 0px;">true</code>&nbsp;and&nbsp;<code style="margin: 0px; padding: 0px;">false</code>.&nbsp;<code style="margin: 0px; padding: 0px;">false</code>&nbsp;is not 0 and&nbsp;<code style="margin: 0px; padding: 0px;">true</code>&nbsp;is not non-zero as in C. Boolean values are no more integers than are strings.</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <a name="xtocid226309" style="margin: 0px; padding: 0px; background-image: initial; background-position: initial; background-repeat: initial;">Else</a></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <i style="margin: 0px; padding: 0px;">Lets look at some examples of if-else:</i><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    //Example 1<br style="margin: 0px; padding: 0px;" />
+    if(a == b) {<br style="margin: 0px; padding: 0px;" />
+    c++;&nbsp;<br style="margin: 0px; padding: 0px;" />
+    }<br style="margin: 0px; padding: 0px;" />
+    if(a != b) {<br style="margin: 0px; padding: 0px;" />
+    c--;<br style="margin: 0px; padding: 0px;" />
+    }<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    //Example 2<br style="margin: 0px; padding: 0px;" />
+    if(a == b) {<br style="margin: 0px; padding: 0px;" />
+    c++;&nbsp;<br style="margin: 0px; padding: 0px;" />
+    }<br style="margin: 0px; padding: 0px;" />
+    else {<br style="margin: 0px; padding: 0px;" />
+    c--;<br style="margin: 0px; padding: 0px;" />
+    }<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    We could add an else statement like so:</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <u style="margin: 0px; padding: 0px;">Source Code</u></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;"><font face="Verdana" style="margin: 0px; padding: 0px;">// This is the Hello program in Java<br style="margin: 0px; padding: 0px;" />
+        class Hello {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; public static void main (String args[]) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* Now let&#39;s say hello */<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(&quot;Hello &quot;);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (args.length &gt; 0) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(args[0]);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;whoever you are&quot;);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp; }<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        }</font></code></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;"><u style="margin: 0px; padding: 0px;">Source Code</u></code></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    public class divisor<br style="margin: 0px; padding: 0px;" />
+    {<br style="margin: 0px; padding: 0px;" />
+    public static void main(String[] args)<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int a = 10;<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int b = 2;<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ( a % b == 0 )<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(a + &quot; is divisible by &quot;+ b);<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(a + &quot; is not divisible by &quot; + b);<br style="margin: 0px; padding: 0px;" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+    }</p>
+<p>
+    <span style="color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">Now that Hello at least doesn&#39;t crash with an ArrayIndexOutOfBoundsException we&#39;re still not done. java Hello works and Java Hello Rusty works, but if we type java Hello Elliotte Rusty Harold, Java still only prints Hello Elliotte. Let&#39;s fix that.</span></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    We&#39;re not just limited to two cases though. We can combine an&nbsp;<code style="margin: 0px; padding: 0px;">else</code>&nbsp;and an&nbsp;<code style="margin: 0px; padding: 0px;">if</code>&nbsp;to make an&nbsp;<code style="margin: 0px; padding: 0px;">else if</code>&nbsp;and use this to test a whole range of mutually exclusive possibilities.&nbsp;</p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <i style="margin: 0px; padding: 0px;">Lets look at some examples of if-else-if:</i><br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    //Example 1<br style="margin: 0px; padding: 0px;" />
+    if(color == BLUE)) {<br style="margin: 0px; padding: 0px;" />
+    System.out.println(&quot;The color is blue.&quot;);<br style="margin: 0px; padding: 0px;" />
+    }<br style="margin: 0px; padding: 0px;" />
+    else if(color == GREEN) {<br style="margin: 0px; padding: 0px;" />
+    System.out.println(&quot;The color is green.&quot;);<br style="margin: 0px; padding: 0px;" />
+    }<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    //Example 2<br style="margin: 0px; padding: 0px;" />
+    if(employee.isManager()) {<br style="margin: 0px; padding: 0px;" />
+    System.out.println(&quot;Is a Manager&quot;);<br style="margin: 0px; padding: 0px;" />
+    }<br style="margin: 0px; padding: 0px;" />
+    else if(employee.isVicePresident()) {<br style="margin: 0px; padding: 0px;" />
+    System.out.println(&quot;Is a Vice-President&quot;);<br style="margin: 0px; padding: 0px;" />
+    }<br style="margin: 0px; padding: 0px;" />
+    else {<br style="margin: 0px; padding: 0px;" />
+    System.out.println(&quot;Is a Worker&quot;);<br style="margin: 0px; padding: 0px;" />
+    }<br style="margin: 0px; padding: 0px;" />
+    <br style="margin: 0px; padding: 0px;" />
+    <u style="margin: 0px; padding: 0px;">Source Code</u></p>
+<p style="margin: 0px 0px 1.5em; padding: 0px; color: rgb(51, 51, 51); font-family: arial, verdana; font-size: 13.28px; line-height: 19.92px;">
+    <code style="margin: 0px; padding: 0px;"><font face="Verdana" style="margin: 0px; padding: 0px;">// This is the Hello program in Java<br style="margin: 0px; padding: 0px;" />
+        class Hello {<br style="margin: 0px; padding: 0px;" />
+        <br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp; public static void main (String args[]) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* Now let&#39;s say hello */<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(&quot;Hello &quot;);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (args.length == 0) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(&quot;whoever you are&quot;);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else if (args.length == 1) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(args[0]);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else if (args.length == 2) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(args[0]);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(&quot; &quot;);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(args[1]);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else if (args.length == 3) {<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(args[0]);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(&quot; &quot;);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(args[1]);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(&quot; &quot;);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(args[2]);<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br style="margin: 0px; padding: 0px;" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println();<br style="margin: 0px; padding: 0px;" />
+        &nbsp; }<br style="margin: 0px; padding: 0px;" />
+        }</font></code></p>
